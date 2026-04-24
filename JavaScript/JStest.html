@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing DOM</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Enter the number">
+    <button onclick="testFunction()">Sum</button>
+    <p id="result"></p>
+    <script>
+        function testFunction()  {
+            var input = document.getElementById("input1");
+            var n=parseInt(input.value);
+            var display=document.getElementById("result");
+
+            var sum=0;
+            for(let i=1;i<=n;i++)
+            {
+                sum += i;
+            }
+            display.innerHTML="The sum of first "+n+" natural numbers is: "+sum;
+        }
+    </script>
+</body>
+</html>

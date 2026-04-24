@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="date1">Enter a value: </label>
+    <input type="date" id="date1" /><br /><br />
+
+    <label for="date2">Enter a value: </label>
+    <input type="date" id="date2" /><br /><br />
+
+    <button onclick="generateMessage()">Generate Message</button>
+
+    <script>
+        function generateMessage() {
+            const date1 = document.getElementById('date1').value;
+            const date2 = document.getElementById('date2').value;
+
+            const randomNum = Math.floor(Math.random() * 5) + 1;
+            var goodMessage = [
+                "Today is a great day!",
+                "You will have a wonderful day!",
+                "Good things are coming your way!",
+                "Stay positive and good things will happen!",
+                "Believe in yourself and all that you are!"
+            ];
+
+            var badMessage = [
+                "Today is a bad day!",
+                "You will have a bad day!",
+                "Bad things are coming your way!",
+                "Stay negative and bad things will happen!",
+                "Believe in yourself and all that you are!"
+            ];
+
+            if(date1 == date2){
+                alert(goodMessage[randomNum - 1]);
+            } else {
+                alert(badMessage[randomNum - 1]);
+            }
+        }
+    </script>
+</body>
+</html>

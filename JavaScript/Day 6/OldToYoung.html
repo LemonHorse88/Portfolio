@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <button onclick="sortPeople()">Sort</button>
+    <p id="output"></p>
+    <p id="youngest"></p>
+    <p id="oldest"></p>
+    <script>
+        const input=[
+            {name:"John", age:13},
+            {name:"Mark",age:56},
+            {name:"Rachel",age:45},
+            {name:"Nate",age:67},
+            {name:"Jeniffer",age:65}
+        ];
+        const output=input.sort((a,b)=>{
+            return b.age-a.age;
+        });
+        console.log(output);
+        console.log("oldest person age",output[4].age);
+        console.log("youngest person age",output[0].age);
+        function sortPeople(){
+            document.getElementById("output").innerHTML="Age difference between oldest and youngest person: "+(output[0].age-output[4].age);
+            document.getElementById("youngest").innerHTML="Youngest person age: " + output[4].age;
+            document.getElementById("oldest").innerHTML="Oldest person age: " + output[0].age;
+        }
+    </script>
+</body>
+</html>

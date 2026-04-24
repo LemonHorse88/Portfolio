@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>CSS Selectors Example</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+p { color: blue; }
+.highlight { background-color: yellow; }
+#unique { font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white sidebar">
+      <div class="d-flex flex-column px-3 pt-2">
+        <a href="assignment1.html" class="btn btn-secondary mb-3">Back to Home</a>
+        <h5>Topics</h5>
+        <ul class="nav flex-column">
+          <li><a href="selectors.html" class="nav-link text-white">Selectors</a></li>
+          <li><a href="boxmodel.html" class="nav-link text-white">Box Model</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col p-4 bg-light">
+      <h1>CSS Selectors Example</h1>
+      <p>This is a normal paragraph.</p>
+      <p class="highlight">This paragraph uses a class selector.</p>
+      <p id="unique">This paragraph uses an ID selector.</p>
+    </div>
+  </div>
+</div>
+<footer class="bg-dark text-white text-center p-3 fixed-bottom">
+  © 2026 Static Website
+</footer>
+</body>
+</html>
